@@ -115,15 +115,21 @@
         <h3>Commentaire – Exercice 2</h3>
       
         <p>
-          L’exercice consistait à faire changer la couleur du fond en fonction du scroll, en utilisant un petit script JavaScript. L’idée était simplement de récupérer la valeur du défilement et de s’en servir pour calculer une couleur qui évolue progressivement.
+          L'objectif de cet exercice était de créer une interaction visuelle liée au comportement de l'utilisateur : le fond de la page devait passer progressivement du noir (#000000) au rouge vif (#FF0000) au fur et à mesure que l'on descend dans le document (scroll).
         </p>
       
         <p>
-          La logique est assez simple : écouter l’événement de scroll, faire un ratio entre la zone parcourue et la hauteur totale, puis envoyer cette valeur dans le style du body. Tant qu’on comprend comment fonctionne <code>scrollY</code>, ça se fait assez vite.
+         Il fallait mettre en place une logique qui détecte la position de la barre de défilement par rapport à la hauteur totale de la page.
+
+Au début du document (haut), la page est noire.
+
+Plus on descend, plus la valeur rouge du code hexadécimal augmente.
+
+Arrivé tout en bas, le fond devient totalement rouge.
         </p>
       
         <p>
-          L’exercice était plutôt agréable à faire, car il mélange un peu de JS et du CSS, et montre bien comment on peut modifier l’apparence d’une page en temps réel. Le rendu final fonctionne proprement et l’effet reste fluide.
+         C'était un exercice intéressant car il sort du cadre "statique" du CSS habituel pour apporter du dynamisme. Le défi principal était de comprendre comment lier la progression du scroll (de 0% à 100%) à l'intensité de la couleur. Le résultat donne un feedback visuel immédiat à l'utilisateur sur sa progression dans la page.
         </p>
       </div>      
       
@@ -141,15 +147,15 @@
         <h3>Commentaire – Exercice 6</h3>
       
         <p>
-          Cet exercice m’a permis de comprendre comment fonctionne un effet de parallaxe, un principe que je n’avais encore jamais utilisé. L’idée est d’animer l’arrière-plan en fonction du scroll, ce qui demande un mélange de positionnement CSS et un peu de JavaScript.
+          Réaliser une page intégrant un effet de parallaxe (où l'image de fond bouge moins vite que le contenu au premier plan lors du défilement). Le contenu de la page devait expliquer lui-même le fonctionnement technique de cet effet sous forme de tutoriel.
         </p>
       
         <p>
-          Le plus important était de récupérer la position de la page au défilement et de l’appliquer aux éléments qui doivent bouger, en tenant compte du <code>data-speed</code> défini dans le HTML. Une fois la logique comprise, l’implémentation devient assez intuitive.
+          J'ai mis en place une structure alternant des sections de contenu textuel et des sections avec des images de fond. La clé de cet effet réside souvent dans l'utilisation de la propriété CSS background-attachment: fixed (ou de transformations 3D pour des versions plus complexes), qui fixe l'image par rapport à la fenêtre du navigateur pendant que le reste défile.
         </p>
       
         <p>
-          J’ai trouvé l’exercice vraiment intéressant, parce qu’il montre comment CSS et JS peuvent travailler ensemble pour créer un effet visuel moderne sans avoir un code trop compliqué. Le rendu final fonctionne bien et donne un mouvement fluide aux sections.
+          C'est un effet très populaire qui donne immédiatement un aspect "pro" et immersif au site. L'exercice était ludique car le résultat visuel est gratifiant pour peu de lignes de code. J'ai bien compris comment dissocier le mouvement du fond de celui du contenu.
         </p>
       </div>      
       

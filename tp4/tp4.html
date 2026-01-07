@@ -116,20 +116,22 @@
         <h3>Commentaire – Exercice 1</h3>
       
         <p>
-          Dans cet exercice, on devait mettre en forme trois blocs uniquement en CSS, tout en gardant le HTML tel quel. Il fallait gérer la largeur, l’alignement des titres, la mise en forme des paragraphes et aussi installer un petit menu fixe sur le côté.
+          À partir d'un fichier HTML intouchable contenant 3 blocs, il fallait réaliser une mise en page avec un menu latéral fixe (position: fixed) et créer une interaction où le clic sur le menu change les couleurs et affiche le paragraphe correspondant.
         </p>
       
         <p>
-          Le point un peu technique venait surtout des sélecteurs comme <code>:nth-child()</code> et surtout <code>:target</code>, qui permettaient de changer la couleur des sections et d’afficher uniquement le paragraphe correspondant quand on clique sur un lien.
+          Réalisation et Difficultés : La première étape consistait à libérer de l'espace à gauche (margin-left) pour y placer le menu en position fixe. La vraie difficulté de cet exercice résidait dans l'interdiction de modifier le HTML :
+
+Pour les couleurs : J'ai dû utiliser des sélecteurs structurels comme :nth-child ou :nth-of-type pour cibler le 1er lien, le 1er titre et le 1er paragraphe afin de leur attribuer la même couleur, et ainsi de suite pour les suivants.
+
+Pour l'interaction : Le plus dur a été de comprendre comment masquer les paragraphes et ne faire apparaître que celui désiré. J'ai utilisé la pseudo-classe :target. Cela permet de modifier le style de l'élément ciblé par l'ancre de l'URL (le #id).
         </p>
       
         <p>
-          Une fois la logique comprise, l’exercice se fait assez bien : c’est surtout une question de bien structurer les règles et de cibler les bons éléments. C’est un bon entraînement pour manipuler des sélecteurs avancés sans utiliser de JavaScript.
+          C'était un exercice technique très intéressant qui m'a montré qu'on peut créer une navigation fonctionnelle (système d'onglets) uniquement en CSS, sans avoir besoin de JavaScript, juste en maîtrisant bien les sélecteurs.
         </p>
       
-        <p>
-          Le rendu final fonctionne comme prévu : les blocs sont en place, le menu reste fixe, les couleurs changent correctement et chaque paragraphe s’affiche au bon moment. Le tout respecte la consigne.
-        </p>
+
       </div>
       
       
@@ -146,15 +148,19 @@
         <h3>Commentaire – Exercice 3</h3>
       
         <p>
-          Le but de cet exercice était de mettre en forme un tableau assez large uniquement grâce aux pseudo-classes comme <code>:nth-child()</code> ou <code>:nth-of-type()</code>, sans toucher au HTML. Il fallait donc repérer les motifs qui se répétaient et cibler les bonnes lignes avec le moins de règles possible.
+          L'objectif était de styliser un tableau HTML brut pour qu'il corresponde à une capture d'écran fournie, avec une contrainte forte : interdiction absolue de modifier le code HTML. Il fallait également minimiser le nombre de règles CSS.
         </p>
       
         <p>
-          Ce n’était pas difficile à comprendre, mais assez minutieux, car le moindre mauvais sélecteur pouvait colorer la mauvaise zone. C’était un bon exercice pour apprendre à optimiser le CSS et à structurer proprement ce type de mise en page.
+          Puisque je ne pouvais pas ajouter de classes dans le HTML (comme .ligne-paire ou .colonne-importante), j'ai dû utiliser exclusivement les pseudo-classes structurelles CSS :
+
+:nth-child(odd) et :nth-child(even) pour créer l'effet "zèbré" (une ligne sur deux colorée), ce qui rend le tableau plus lisible.
+
+J'ai dû utiliser des formules plus précises comme :nth-child(n+2) ou cibler des colonnes spécifiques pour reproduire la mise en forme des entêtes et des données.
         </p>
       
         <p>
-          Mon résultat fonctionne globalement, même si certaines couleurs ne correspondent pas exactement à la maquette. La lisibilité est bonne, mais ce n’est pas totalement identique au modèle.
+          Cet exercice ressemblait presque à des mathématiques ! Au début, c'était un peu abstrait de devoir "compter" les éléments via le CSS, mais j'ai compris la puissance de cette méthode. Elle permet de garder un code HTML très propre et de gérer la mise en forme de données dynamiques (comme un tableau dont on ne connaît pas la longueur à l'avance) sans avoir à classer manuellement chaque ligne.
         </p>
       </div>
       

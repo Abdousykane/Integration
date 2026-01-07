@@ -112,7 +112,14 @@
 
       <iframe src="ex1/index.html"></iframe>
 
-      <div class="commentaire"> <h3>Commentaire – Exercice Sprite</h3> <p> Cet exercice m’a demandé d’afficher une sprite sheet dans un canvas et de faire bouger le personnage avec les touches directionnelles. Sur le papier, ça avait l’air simple, mais en pratique j’ai vite vu que gérer une animation image par image demande pas mal de précision. </p> <p> J’ai surtout galéré avec le découpage du sprite : comprendre comment récupérer la bonne partie de l’image selon la ligne et la colonne, recalculer la taille des frames, et éviter que le personnage soit totalement invisible parce que l’image n’était pas encore chargée. J’ai dû corriger plusieurs fois la logique avant d’obtenir un affichage cohérent. </p> <p> Le déplacement fonctionne, même si l’animation n’est pas parfaite. Par moments, le personnage se déplace un peu trop vite ou ne s’aligne pas exactement comme je voudrais, mais l’ensemble reste fluide et lisible. Le fond aussi m’a posé quelques soucis au début, mais après quelques ajustements, tout s’affiche correctement. </p> <p> Au final, même si le résultat n’est pas totalement optimisé, j’ai réussi à obtenir une animation complète et fonctionnelle. Cet exercice m’a surtout appris comment manipuler des sprites dans un canvas, gérer les événements clavier et organiser une petite boucle d’animation. C’était plus technique que prévu, mais vraiment formateur. </p> </div>
+      <div class="commentaire"> <h3>Commentaire – Exercice Sprite</h3> <p> Il s'agissait de créer un mini-jeu interactif : déplacer un personnage sur un canvas de 512x512 pixels à l'aide des flèches directionnelles du clavier. Le personnage devait changer d'apparence à chaque mouvement (animation du sprite) et ne pas pouvoir sortir des limites du terrain. </p> 
+      
+      <p>
+        C'est sans doute l'exercice le plus ludique. Il m'a permis de comprendre la logique de "boucle de jeu" : écouter l'input, mettre à jour la position, vérifier les collisions, effacer le canvas et redessiner le personnage à sa nouvelle place.
+
+
+      </p>
+      </div>
       
     </section>
 
@@ -127,20 +134,13 @@
         <h3>Commentaire – Exercice 2</h3>
       
         <p>
-          L’objectif de cet exercice était de créer une animation en continu dans le canvas : Mario devait courir en boucle pendant que le décor avançait derrière lui. Le rendu final donne l’impression d’un mouvement automatique, comme dans un jeu en 2D.
+          L'ultime exercice consistait à créer une animation de type "runner". Il fallait animer un fond qui défile indéfiniment pour donner l'illusion de vitesse, tandis qu'un personnage (Mario) court sur place dans un Canvas de 600x480 pixels.
         </p>
       
         <p>
-          La mise en place de l’animation m’a obligé à bien gérer les images du sprite et le rafraîchissement du canvas. Le principe reste assez simple : changer régulièrement l’image de Mario et déplacer l’arrière-plan à une vitesse constante. Le décor se répète automatiquement, ce qui permet d’avoir un défilement infini.
+         C'était l'exercice le plus abouti car il combine tout ce qu'on a vu : gestion du Canvas, boucles d'animation (requestAnimationFrame) et logique algorithmique pour le défilement. C'est très satisfaisant de voir le résultat final ressembler à un vrai jeu vidéo.
         </p>
       
-        <p>
-          La difficulté que j’ai surtout rencontrée concernait le timing : si l’avancement du fond ou la vitesse du sprite n’est pas bien réglée, l’animation semble saccadée ou Mario paraît glisser au lieu de courir. J’ai dû ajuster plusieurs valeurs avant d’obtenir un rendu fluide.
-        </p>
-      
-        <p>
-          Le résultat final est satisfaisant : Mario court correctement, le fond se déplace sans coupure, et l’ensemble est assez dynamique. Cet exercice m’a aidé à mieux comprendre la gestion des animations continues dans un canvas.
-        </p>
       </div>
       
     </section>

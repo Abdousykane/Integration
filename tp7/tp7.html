@@ -116,26 +116,14 @@
         <h3>Commentaire – Exercice Canvas</h3>
       
         <p>
-          Cet exercice m’a demandé de réaliser plusieurs figures différentes dans un même canvas,
-          puis de les faire défiler avec un bouton. Même si le principe paraît simple au début,
-          j’ai vite compris que chaque dessin demandait une logique assez particulière :
-          les cercles concentriques, la grille avec la poule, le damier et le quadrillage courbé.
+          Objectif : L'objectif était d'utiliser l'élément HTML5 <canvas> pour afficher différentes figures géométriques. Contrairement aux exercices précédents en CSS, il fallait ici utiliser du JavaScript pour dessiner dans la zone et créer un bouton permettant de passer d'une figure à l'autre en boucle.
         </p>
       
         <p>
-          Le plus compliqué a été de placer correctement les éléments dans l’espace.
-          Entre les calculs de coordonnées, les conversions pour la grille, et les multiples boucles
-          pour tracer les segments, il fallait être très précis, sinon le dessin décalait tout de suite.
-          J’ai aussi un peu modifié les valeurs et certaines lignes pour adapter le code,
-          ce qui fait que le résultat n’est pas parfaitement identique au modèle.
+         C'était une bonne initiation à la programmation graphique. J'ai compris que le Canvas fonctionne comme une toile de peinture numérique où chaque action doit être codée explicitement, ce qui offre une liberté totale mais demande plus de rigueur que le CSS.
         </p>
       
-        <p>
-          Malgré quelques petites imperfections,
-          toutes les figures s’affichent et le bouton permet bien de passer de l’une à l’autre.
-          Ce TP m’a surtout aidé à mieux comprendre le fonctionnement du canvas et l’importance
-          d’organiser proprement son code pour éviter de se perdre.
-        </p>
+      
       </div>
       
       
@@ -149,44 +137,23 @@
       <iframe src="ex4/Exercice4.html"></iframe>
 
       <div class="commentaire">
-        <h3>Commentaire – Exercice 3</h3>
+        <h3>Commentaire – Exercice 4</h3>
       
         <p>
-          Cet exercice consistait à créer un rectangle dans un canvas 300×300, puis à le
-          rendre totalement interactif grâce à plusieurs boutons permettant de modifier sa
-          largeur, sa hauteur, sa couleur, son style (plein ou contour) et même sa
-          visibilité. Le rectangle devait réagir immédiatement aux actions de
-          l’utilisateur, ce qui m’a obligée à bien structurer la fonction d’affichage et à
-          gérer les mises à jour du canvas à chaque clic.
+          L'objectif de cet exercice était de construire une animation complexe de manière modulaire. Il fallait procéder en trois étapes :
+
+Créer une fonction petale pour dessiner une forme unique (courbes de Bézier).
+
+Créer une fonction fleur qui appelle la fonction petale plusieurs fois en effectuant une rotation pour créer la corolle.
+
+Animer cette fleur pour qu'elle tourne indéfiniment sur elle-même.
         </p>
       
         <p>
-          Les connaissances mobilisées sont principalement l’utilisation du canvas en
-          JavaScript (dessin, effacement, tracés, couleurs), mais aussi la gestion des
-          événements <code>onclick</code>, la manipulation de variables pour conserver
-          l’état du rectangle, et la mise en place d’une logique cyclique pour les
-          couleurs et les tailles. C’est un bon exercice pour comprendre comment relier le
-          HTML, le CSS et le JavaScript autour d’un même élément graphique.
+Cet exercice m'a fait comprendre l'importance de la réutilisabilité du code. Au lieu de coder 8 pétales manuellement, j'ai codé un seul modèle que j'ai dupliqué mathématiquement. C'est une méthode de travail beaucoup plus propre et efficace.
         </p>
       
-        <p>
-          La difficulté était raisonnable : il fallait surtout organiser correctement les
-          différentes actions et penser à redessiner le canvas à chaque modification. Une
-          fois la structure mise en place, le reste était logique et agréable à faire.
-        </p>
-      
-        <p>
-          L’exercice est très utile pour le développement Front, car il montre comment
-          créer des éléments interactifs et réactifs pour l’utilisateur. C’est une base
-          pour comprendre comment fonctionnent les interfaces dynamiques.
-        </p>
-      
-        <p>
-          Le résultat obtenu fonctionne parfaitement : toutes les actions s’enchaînent
-          comme prévu, et le rectangle réagit immédiatement aux boutons. C’était un
-          exercice vraiment sympa à réaliser, car on voit directement le côté interactif
-          et visuel de ce qu’on programme.
-        </p>
+        
       </div>
       
     </section>

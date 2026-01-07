@@ -123,7 +123,7 @@
         </p>
       
         <p>
-          Le résultat final fonctionne comme prévu et change bien de couleur aux bons seuils, ce qui valide le fonctionnement du responsive sur un cas très simple.
+          Le résultat final fonctionne comme prévu et change bien de couleur aux bons seuils (breakpoints). Cela valide le fonctionnement du responsive sur un cas très simple avant de passer à des structures plus complexes.
         </p>
       </div>
       
@@ -131,7 +131,7 @@
 
 
     <section class="exercice-block">
-      <h3>Exercice 3</h3>
+      <h3>Exercice 2</h3>
 
       <iframe src="ex2/exercice2.html"></iframe>
 
@@ -139,15 +139,22 @@
         <h3>Commentaire – Exercice 2</h3>
       
         <p>
-          L’objectif était de créer un menu qui s’adapte selon la taille de l’écran : affichage classique en ligne sur desktop, puis un hamburger qui remplace la navigation quand la fenêtre devient plus petite. Le menu devait aussi pouvoir s’ouvrir et se fermer avec une petite animation.
+          Pour ce dernier exercice, il fallait créer une structure de blocs (titre, blocs bleus et blocs roses) qui change radicalement de disposition selon la largeur de l'écran, en respectant deux points de rupture précis : 960px et 650px.
+
+Réalisation : Le défi principal était de gérer le passage fluide d'une grille multi-colonnes à une structure empilée :
+
+Version Bureau : Une disposition complexe sur 3 colonnes pour les blocs bleus.
+
+Tablette (< 960px) : Une réorganisation où les éléments passent sur 2 colonnes.
+
+Mobile (< 650px) : Une mise en page "stack" où tous les blocs s'empilent verticalement sur toute la largeur (100%).
+      
+        <p>
+         J'ai trouvé cet exercice très visuel et satisfaisant. Il fallait bien calculer les pourcentages de largeur (width) ou configurer la grille pour que les éléments passent à la ligne automatiquement au bon moment.
         </p>
       
         <p>
-          La partie la plus importante reposait sur les media queries et sur l’utilisation du sélecteur <code>:target</code>, qui permet d'afficher le menu mobile sans JavaScript. Il fallait également ajuster la mise en colonne, la transition et l’apparition du bouton selon les résolutions.
-        </p>
-      
-        <p>
-          L’exercice était plutôt sympa à faire, car il regroupe plusieurs notions qu’on utilise souvent en responsive. Une fois la logique comprise, tout s’enchaîne assez facilement. Le rendu final fonctionne correctement : le menu change bien de forme et l’ouverture en mobile est fluide.
+        C'est une excellente mise en pratique du responsive design. J'ai bien compris l'importance de définir l'ordre des règles CSS (du plus large au plus petit ou l'inverse) pour que les styles ne s'écrasent pas entre eux. Le rendu final s'adapte parfaitement au redimensionnement du navigateur.
         </p>
       </div>
       

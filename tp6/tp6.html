@@ -107,23 +107,31 @@
   <div class="tp-container">
 
     <section class="exercice-block">
-      <h3>Exercice 1</h3>
+      <h3>Exercice 2</h3>
 
       <iframe src="ex2/index.html"></iframe>
 
       <div class="commentaire">
-        <h3>Commentaire – Exercice 1</h3>
+        <h3>Commentaire – Exercice 2</h3>
       
         <p>
-          L’objectif de cet exercice était de créer un effet “rideau” en pur CSS : au survol, un bloc devait glisser sur l’image pour la recouvrir. Pour ça, on utilisait surtout le positionnement absolu et une transition appliquée au transform.
+         Réaliser une série de 7 animations différentes pour illustrer des temps d'attente (loaders) ou des interactions :
+
+Des points qui grossissent de manière décalée.
+
+Un effet d'égaliseur audio (barres verticales).
+
+Un cercle de chargement rotatif.
+
+Des interactions complexes sur du texte (apparition caractère par caractère, tremblement).
         </p>
       
         <p>
-          La logique est assez simple : un conteneur positionné correctement, un élément qui sert de masque, et un <code>:hover</code> pour déclencher l’animation. Une fois la structure posée, l’effet se met en place rapidement.
+          C'était sans doute la partie la plus créative du TP. J'ai utilisé principalement la règle @keyframes pour définir les étapes de l'animation et la propriété animation pour les appliquer. Le point clé était la gestion de l'animation-delay. Pour les 3 points ou l'effet de vague des barres rouges, il fallait appliquer la même animation à chaque élément mais avec un léger décalage temporel (ex: 0.1s, 0.2s, 0.3s) pour créer un mouvement fluide.
         </p>
       
         <p>
-          C’était un bon rappel des bases du positionnement et des transitions CSS. Le résultat final fonctionne bien et l’animation est fluide, conforme à ce qui était demandé.
+          Cet exercice m'a permis de bien faire la distinction entre une simple transition (au survol d'un bouton par exemple) et une animation complexe qui tourne en boucle. J'ai trouvé très satisfaisant de pouvoir créer des loaders modernes sans avoir recours à des images ou des scripts lourds.
         </p>
       </div>      
       
@@ -139,29 +147,17 @@
         <h3>Commentaire – Exercice 5</h3>
       
         <p>
-          Pour cet exercice, j’ai réalisé une bannière publicitaire animée au format 728 × 90 px. 
-          J’ai choisi un thème autour du bien-être, avec une ambiance douce et naturelle, afin de produire 
-          une bannière plus élégante et moins “agressive” visuellement que les pubs classiques.
+          Réaliser une bannière web animée aux dimensions standards (728 x 90 px). L'objectif était de promouvoir un sujet au choix (produit, marque ou événement) en intégrant obligatoirement du texte et une image animés, le tout sans utiliser de format GIF.
         </p>
       
         <p>
-          La bannière se compose d’un texte animé en CSS, qui apparaît progressivement avec un effet de glissement, 
-          et d’une image simple (une feuille stylisée) animée en zoom léger. J’ai aussi ajouté des lignes dorées 
-          qui se déplacent horizontalement pour donner un côté plus moderne sans surcharger l’espace.
+          Pour cet exercice, j'ai dû faire preuve de créativité dans un espace très restreint. La principale contrainte technique était de réaliser les animations uniquement en CSS (ou JS). J'ai utilisé les propriétés @keyframes pour séquencer l'apparition des éléments : le texte qui glisse (translate) ou apparaît en fondu (opacity), et l'image qui s'anime pour attirer l'attention.
         </p>
       
         <p>
-          La difficulté principale a été de réussir à tout faire rentrer dans un format aussi étroit. 
-          Il fallait trouver un équilibre entre lisibilité, animation et esthétique, tout en gardant une structure claire. 
-          Les animations en elles-mêmes sont simples, mais le timing et le rythme demandent quelques ajustements 
-          pour que tout reste fluide.
+C'était un exercice très différent des autres car plus axé sur le marketing et le "motion design" en code. Il m'a appris à gérer le timing des animations CSS pour créer un message publicitaire court mais impactant, tout en respectant des contraintes de dimensions strictes.
         </p>
       
-        <p>
-          Au final, la bannière fonctionne bien : le texte apparaît de manière douce, la feuille s’anime en continu 
-          et les lignes créent une ambiance plus vivante. L’ensemble respecte les contraintes du sujet et donne un rendu propre 
-          et professionnel.
-        </p>
       </div>
       
       
