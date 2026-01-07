@@ -1,0 +1,76 @@
+/* --- ÉTAPE 1 : Mise en forme des blocs --- */
+
+div {
+    width: 600px;
+    margin-left: 250px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+div h2 {
+    text-align: center;
+}
+
+div p {
+    border-style: solid;
+    border-width: 3px;
+    padding: 15px;
+    text-align: justify;
+}
+
+
+/* --- ÉTAPE 2 : Menu Fixe et Couleurs --- */
+
+ul {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    width: 200px;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: block;
+    padding: 5px;
+}
+
+/* --- GESTION DES COULEURS (Item Menu + Titre + Bordure) --- */
+
+/* BLOC 1 - ROUGE */
+ul li:nth-child(1) a { color: red; }
+#paragraphe1 h2 { color: red; }
+#paragraphe1 p { border-color: red; }
+
+/* BLOC 2 - VERT */
+ul li:nth-child(2) a { color: green; }
+#paragraphe2 h2 { color: green; }
+#paragraphe2 p { border-color: green; }
+
+/* BLOC 3 - BLEU */
+ul li:nth-child(3) a { color: blue; }
+#paragraphe3 h2 { color: blue; }
+#paragraphe3 p { border-color: blue; }
+
+
+/* --- ÉTAPE 3 : Faire disparaître les paragraphes du flux --- */
+
+div {
+    display: none;
+}
+
+/* --- ÉTAPE 4 : Afficher uniquement l'élément ciblé --- */
+
+div:target {
+    display: block;
+    animation: apparition 0.5s; 
+}
+
+@keyframes apparition {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

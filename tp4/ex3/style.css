@@ -1,0 +1,59 @@
+/* TABLEAU GLOBAL */
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 95%;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+/* CAPTION */
+caption {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* BORDURES */
+th, td {
+  border: 1px solid #333;
+  padding: 6px 8px;
+}
+
+/* -------------- EN-TÊTE (Ligne 1) -------------- */
+tr:nth-child(1) {
+  background-color: #cccccc;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* -------------- ROSE (lignes 2 → 5) -------------- */
+tr:nth-child(n+2):nth-child(-n+5) {
+  background-color: #f4a7a7;
+}
+
+/* -------------- VERT CLAIR (lignes 6 → 12) -------------- */
+tr:nth-child(n+6):nth-child(-n+12) {
+  background-color: #b8f0a8;
+}
+
+/* -------------- BLEU PÂLE (lignes 13 → 17) -------------- */
+tr:nth-child(n+13):nth-child(-n+17) {
+  background-color: #c3e8f8;
+}
+
+/* -------------- BLEU + FONCÉ (lignes 18 → 21) -------------- */
+tr:nth-child(n+18):nth-child(-n+21) {
+  background-color: #a9d6f8;
+}
+
+/* -------------- TURQUOISE (ligne 22) -------------- */
+tr:nth-child(22) {
+  background-color: #b9f3ee;
+}
+
+/* Colonnes centrées sauf 1ère & 2ème */
+th:nth-child(3), th:nth-child(4),
+td:nth-child(3), td:nth-child(4) {
+  text-align: center;
+}

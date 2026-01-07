@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TP7 – Exercices</title>
+
+  <!-- Style global -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* ===== PALETTE ===== */
+    :root {
+      --sand: #ffffff;          /* beige */
+      --blue-light: #AFC9E8;    /* bleu clair */
+      --blue-dark: #3E5F87;     /* bleu foncé */
+      --text: #2a2a2a;
+      --grey-border: #d5d5d5;
+    }
+  
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif; 
+    }
+  
+    body {
+      background: var(--sand);
+      color: var(--text);
+      padding: 40px 20px;
+    }
+  
+    /* ===== TITRE ===== */
+    h2 {
+      font-size: 28px;
+      color: var(--blue-dark);
+      text-align: center;
+      margin-bottom: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    /* ===== CONTAINER ===== */
+    .tp-container {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+  
+    /* ===== EXERCICE BLOCK ===== */
+    .exercice-block {
+      background: #ffffff;
+      border: 1px solid var(--grey-border);
+      border-radius: 4px;
+      padding: 20px;
+    }
+  
+    .exercice-block h3 {
+      color: var(--blue-dark);
+      font-size: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  
+    /* ===== IFRAME ===== */
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid var(--grey-border);
+      border-radius: 4px;
+      background: white;
+      margin-top: 8px;
+    }
+  
+    /* ===== COMMENTAIRE ===== */
+    .commentaire {
+      margin-top: 18px;
+      padding: 15px;
+      background: #F4F0E8; /* beige plus clair */
+      border-radius: 4px;
+    }
+  
+    .commentaire h3,
+    .commentaire h4 {
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: var(--blue-dark);
+    }
+  
+    .commentaire p {
+      font-size: 14.5px;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 style="margin:20px;">TP7 – Exercices 1 et 3</h2>
+
+  <div class="tp-container">
+
+    <!-- ==================== EXERCICE 1 ==================== -->
+    <section class="exercice-block">
+      <h3>Exercice 1</h3>
+
+      <iframe src="ex1/index.html" ></iframe>
+
+      <div class="commentaire">
+        <h3>Commentaire – Exercice Canvas</h3>
+      
+        <p>
+          Cet exercice m’a demandé de réaliser plusieurs figures différentes dans un même canvas,
+          puis de les faire défiler avec un bouton. Même si le principe paraît simple au début,
+          j’ai vite compris que chaque dessin demandait une logique assez particulière :
+          les cercles concentriques, la grille avec la poule, le damier et le quadrillage courbé.
+        </p>
+      
+        <p>
+          Le plus compliqué a été de placer correctement les éléments dans l’espace.
+          Entre les calculs de coordonnées, les conversions pour la grille, et les multiples boucles
+          pour tracer les segments, il fallait être très précis, sinon le dessin décalait tout de suite.
+          J’ai aussi un peu modifié les valeurs et certaines lignes pour adapter le code,
+          ce qui fait que le résultat n’est pas parfaitement identique au modèle.
+        </p>
+      
+        <p>
+          Malgré quelques petites imperfections,
+          toutes les figures s’affichent et le bouton permet bien de passer de l’une à l’autre.
+          Ce TP m’a surtout aidé à mieux comprendre le fonctionnement du canvas et l’importance
+          d’organiser proprement son code pour éviter de se perdre.
+        </p>
+      </div>
+      
+      
+    </section>
+
+
+    <!-- ==================== EXERCICE 3 ==================== -->
+    <section class="exercice-block">
+      <h3>Exercice 4</h3>
+
+      <iframe src="ex4/Exercice4.html"></iframe>
+
+      <div class="commentaire">
+        <h3>Commentaire – Exercice 3</h3>
+      
+        <p>
+          Cet exercice consistait à créer un rectangle dans un canvas 300×300, puis à le
+          rendre totalement interactif grâce à plusieurs boutons permettant de modifier sa
+          largeur, sa hauteur, sa couleur, son style (plein ou contour) et même sa
+          visibilité. Le rectangle devait réagir immédiatement aux actions de
+          l’utilisateur, ce qui m’a obligée à bien structurer la fonction d’affichage et à
+          gérer les mises à jour du canvas à chaque clic.
+        </p>
+      
+        <p>
+          Les connaissances mobilisées sont principalement l’utilisation du canvas en
+          JavaScript (dessin, effacement, tracés, couleurs), mais aussi la gestion des
+          événements <code>onclick</code>, la manipulation de variables pour conserver
+          l’état du rectangle, et la mise en place d’une logique cyclique pour les
+          couleurs et les tailles. C’est un bon exercice pour comprendre comment relier le
+          HTML, le CSS et le JavaScript autour d’un même élément graphique.
+        </p>
+      
+        <p>
+          La difficulté était raisonnable : il fallait surtout organiser correctement les
+          différentes actions et penser à redessiner le canvas à chaque modification. Une
+          fois la structure mise en place, le reste était logique et agréable à faire.
+        </p>
+      
+        <p>
+          L’exercice est très utile pour le développement Front, car il montre comment
+          créer des éléments interactifs et réactifs pour l’utilisateur. C’est une base
+          pour comprendre comment fonctionnent les interfaces dynamiques.
+        </p>
+      
+        <p>
+          Le résultat obtenu fonctionne parfaitement : toutes les actions s’enchaînent
+          comme prévu, et le rectangle réagit immédiatement aux boutons. C’était un
+          exercice vraiment sympa à réaliser, car on voit directement le côté interactif
+          et visuel de ce qu’on programme.
+        </p>
+      </div>
+      
+    </section>
+
+  </div>
+
+</body>
+</html>

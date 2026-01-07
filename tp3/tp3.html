@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TP3 – Exercices</title>
+
+  <!-- Style global -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* ===== PALETTE ===== */
+    :root {
+      --sand: #ffffff;          /* beige */
+      --blue-light: #AFC9E8;    /* bleu clair */
+      --blue-dark: #3E5F87;     /* bleu foncé */
+      --text: #2a2a2a;
+      --grey-border: #d5d5d5;
+    }
+  
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif; 
+    }
+  
+    body {
+      background: var(--sand);
+      color: var(--text);
+      padding: 40px 20px;
+    }
+  
+    /* ===== TITRE ===== */
+    h2 {
+      font-size: 28px;
+      color: var(--blue-dark);
+      text-align: center;
+      margin-bottom: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    /* ===== CONTAINER ===== */
+    .tp-container {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+  
+    /* ===== EXERCICE BLOCK ===== */
+    .exercice-block {
+      background: #ffffff;
+      border: 1px solid var(--grey-border);
+      border-radius: 4px;
+      padding: 20px;
+    }
+  
+    .exercice-block h3 {
+      color: var(--blue-dark);
+      font-size: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  
+    /* ===== IFRAME ===== */
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid var(--grey-border);
+      border-radius: 4px;
+      background: white;
+      margin-top: 8px;
+    }
+  
+    /* ===== COMMENTAIRE ===== */
+    .commentaire {
+      margin-top: 18px;
+      padding: 15px;
+      background: #F4F0E8; /* beige plus clair */
+      border-radius: 4px;
+    }
+  
+    .commentaire h3,
+    .commentaire h4 {
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: var(--blue-dark);
+    }
+  
+    .commentaire p {
+      font-size: 14.5px;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 style="margin:20px;">TP3 – Exercices 1 et 3</h2>
+
+  <div class="tp-container">
+
+    <section class="exercice-block">
+      <h3>Exercice 1</h3>
+
+      <iframe src="ex1/index.html" ></iframe>
+
+      <div class="commentaire">
+        <h3>Commentaire – Exercice 1</h3>
+      
+        <p>
+          Dans cet exercice, l’objectif était de faire réagir un simple bloc aux changements de taille de fenêtre en modifiant sa couleur. L’idée était surtout de revoir le principe des media queries et de comprendre comment déclencher différents styles selon des largeurs d’écran.
+        </p>
+      
+        <p>
+          Les règles à mettre en place étaient assez basiques : un style par défaut, puis deux variations pour les écrans plus petits. Comme c’est une notion que j’utilise souvent, je n’ai pas rencontré de difficulté particulière et le rendu s’est mis en place assez vite.
+        </p>
+      
+        <p>
+          Le résultat final fonctionne comme prévu et change bien de couleur aux bons seuils, ce qui valide le fonctionnement du responsive sur un cas très simple.
+        </p>
+      </div>
+      
+    </section>
+
+
+    <section class="exercice-block">
+      <h3>Exercice 3</h3>
+
+      <iframe src="ex2/exercice2.html"></iframe>
+
+      <div class="commentaire">
+        <h3>Commentaire – Exercice 2</h3>
+      
+        <p>
+          L’objectif était de créer un menu qui s’adapte selon la taille de l’écran : affichage classique en ligne sur desktop, puis un hamburger qui remplace la navigation quand la fenêtre devient plus petite. Le menu devait aussi pouvoir s’ouvrir et se fermer avec une petite animation.
+        </p>
+      
+        <p>
+          La partie la plus importante reposait sur les media queries et sur l’utilisation du sélecteur <code>:target</code>, qui permet d'afficher le menu mobile sans JavaScript. Il fallait également ajuster la mise en colonne, la transition et l’apparition du bouton selon les résolutions.
+        </p>
+      
+        <p>
+          L’exercice était plutôt sympa à faire, car il regroupe plusieurs notions qu’on utilise souvent en responsive. Une fois la logique comprise, tout s’enchaîne assez facilement. Le rendu final fonctionne correctement : le menu change bien de forme et l’ouverture en mobile est fluide.
+        </p>
+      </div>
+      
+      
+    </section>
+
+  </div>
+
+</body>
+</html>

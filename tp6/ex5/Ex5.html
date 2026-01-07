@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bannière NewJeans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .banner {
+            width: 728px;
+            height: 90px;
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 50%, #ffd3b6 100%);
+            position: relative;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            cursor: pointer;
+        }
+
+        /* Motif de fond animé */
+        .pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle, rgba(255, 255, 255, 0.3) 2px, transparent 2px);
+            background-size: 30px 30px;
+            animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(30px, 30px);
+            }
+        }
+
+        /* Étoiles scintillantes */
+        .star {
+            position: absolute;
+            font-size: 20px;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .star:nth-child(2) {
+            top: 15px;
+            left: 100px;
+            animation-delay: 0s;
+        }
+
+        .star:nth-child(3) {
+            top: 60px;
+            left: 250px;
+            animation-delay: 0.5s;
+        }
+
+        .star:nth-child(4) {
+            top: 25px;
+            right: 150px;
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(5) {
+            top: 70px;
+            right: 50px;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(0.8) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2) rotate(180deg);
+            }
+        }
+
+        /* Logo/Texte NewJeans animé */
+        .logo-container {
+            position: absolute;
+            top: 50%;
+            left: 80px;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .logo-text {
+            font-size: 38px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            background: linear-gradient(45deg, #ff6b9d, #c44569, #8e44ad, #3867d6);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite, bounceIn 1s ease-out;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Sous-titre animé */
+        .subtitle {
+            font-size: 12px;
+            color: #c44569;
+            font-weight: bold;
+            margin-top: 2px;
+            opacity: 0;
+            animation: slideIn 1s ease-out 0.8s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Silhouettes des membres avec images */
+        .member {
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+            height: 70px;
+            opacity: 0;
+            animation: memberAppear 0.8s ease-out forwards;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .member img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member:nth-child(7) {
+            left: 50%;
+            margin-left: -125px;
+            animation-delay: 1.2s;
+        }
+
+        .member:nth-child(8) {
+            left: 50%;
+            margin-left: -65px;
+            animation-delay: 1.4s;
+        }
+
+        .member:nth-child(9) {
+            left: 50%;
+            margin-left: -5px;
+            animation-delay: 1.6s;
+        }
+
+        .member:nth-child(10) {
+            left: 50%;
+            margin-left: 55px;
+            animation-delay: 1.8s;
+        }
+
+        .member:nth-child(11) {
+            left: 50%;
+            margin-left: 115px;
+            animation-delay: 2s;
+        }
+
+        @keyframes memberAppear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .member svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .member svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Coeurs flottants */
+        .heart {
+            position: absolute;
+            font-size: 16px;
+            color: #ff6b9d;
+            animation: floatHeart 4s ease-in-out infinite;
+        }
+
+        .heart:nth-child(13) {
+            bottom: 10px;
+            left: 50px;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(14) {
+            bottom: 20px;
+            left: 680px;
+            animation-delay: 1s;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-50px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* Bouton CTA animé */
+        .cta-button {
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff6b9d, #c44569);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+            opacity: 0;
+            animation: pulse 2s ease-in-out 2.2s infinite, fadeInScale 0.8s ease-out 2.2s forwards;
+            z-index: 20;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: translateY(-50%) scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(-50%) scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translateY(-50%) scale(1);
+                box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+            }
+            50% {
+                transform: translateY(-50%) scale(1.05);
+                box-shadow: 0 6px 20px rgba(255, 107, 157, 0.6);
+            }
+        }
+
+        /* Notes de musique */
+        .note {
+            position: absolute;
+            font-size: 18px;
+            opacity: 0;
+            animation: musicNote 3s ease-in-out infinite;
+        }
+
+        .note:nth-child(16) {
+            top: 20px;
+            left: 350px;
+            animation-delay: 0.5s;
+        }
+
+        .note:nth-child(17) {
+            top: 50px;
+            left: 400px;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes musicNote {
+            0% {
+                opacity: 0;
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-20px) rotate(20deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-40px) rotate(40deg);
+            }
+        }
+
+        /* Texte promotionnel */
+        .promo-text {
+            position: absolute;
+            top: 18px;
+            left: 80px;
+            font-size: 10px;
+            color: #8e44ad;
+            font-weight: bold;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: slideDown 0.6s ease-out 0.5s forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Placeholder pour image */
+        .image-placeholder {
+            position: absolute;
+            top: 10px;
+            right: 380px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 15;
+            opacity: 0;
+            animation: zoomIn 0.8s ease-out 1s forwards, float 3s ease-in-out 2s infinite;
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+            border: 3px solid rgba(255, 107, 157, 0.6);
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-5px) scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- Motif de fond -->
+        <div class="pattern"></div>
+        
+        <!-- Étoiles scintillantes -->
+        <div class="star">✨</div>
+        <div class="star">✨</div>
+        <div class="star">⭐</div>
+        <div class="star">✨</div>
+        
+        <!-- Logo et texte principal -->
+        <div class="promo-text">Nouveau Single</div>
+        <div class="logo-container">
+            <div class="logo-text">NewJeans</div>
+            <div class="subtitle">K-POP SENSATION 2025</div>
+        </div>
+        
+        <!-- Membres avec images -->
+        <div class="member">
+            <img src="Image1.jpg" alt="Member 1">
+        </div>
+        <div class="member">
+            <img src="Image2.jpg" alt="Member 2">
+        </div>
+        <div class="member">
+            <img src="Image3.jpg" alt="Member 3">
+        </div>
+        <div class="member">
+            <img src="Image4.jpg" alt="Member 4">
+        </div>
+        <div class="member">
+            <img src="Image5.jpg" alt="Member 5">
+        </div>
+        
+        <!-- Coeurs flottants -->
+        <div class="heart">💕</div>
+        <div class="heart">💖</div>
+        
+        <!-- Notes de musique -->
+        <div class="note">🎵</div>
+        <div class="note">🎶</div>
+        
+        <!-- Bouton CTA -->
+        <div class="cta-button">Écouter ▶</div>
+    </div>
+</body>
+</html>

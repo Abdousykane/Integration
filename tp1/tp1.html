@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TP – Exercices</title>
+
+  <style>
+    /* ===== PALETTE ===== */
+    :root {
+      --beige: #ffffff;
+      --blue: #913535;
+      --blue-hover: #bd2c2c;
+      --text: #1e1e1e;
+    }
+  
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body {
+      background: var(--beige);
+      color: var(--text);
+      padding: 40px 30px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+  
+    /* ===== TITRE ===== */
+    h2 {
+      font-size: 32px;
+      color: var(--blue);
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+  
+    /* ===== CONTAINER ===== */
+    .tp-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    /* ===== EXERCICE BLOCK ===== */
+    .exercice-block {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+  
+    .exercice-block h3 {
+      color: var(--blue);
+      font-size: 22px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+  
+    /* ===== IFRAME ===== */
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #d4cec0;
+      border-radius: 6px;
+      background: white;
+      margin-top: 15px;
+    }
+  
+    /* ===== COMMENTAIRE ===== */
+    .commentaire {
+      margin-top: 25px;
+      padding: 20px;
+      background: var(--beige);
+      border-radius: 6px;
+      border-left: 4px solid var(--blue);
+    }
+  
+    .commentaire h3,
+    .commentaire h4 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: var(--blue);
+      font-weight: 600;
+    }
+  
+    .commentaire p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .commentaire p:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+  
+
+</head>
+
+<body>
+
+  <h2>TP1 – Exercices</h2>
+
+  <div class="tp-container">
+
+    <!-- EXERCICE 1 -->
+    <section class="exercice-block">
+      <h3>Exercice 1 – Flexbox</h3>
+
+      <iframe src="ex1/index.html"></iframe>
+
+      <div class="commentaire">
+        <h3>Commentaire – Exercice 1</h3>
+      
+        <p>
+Cet exercice a été beaucoup plus compliqué que ce que je pensais. Flexbox paraît simple en théorie (aligner des éléments, gérer l'espace), 
+ mais dès qu'il faut reproduire une mise en page précise comme celle demandée — avec la séparation stricte entre les propriétés du 
+ parent et celles des enfants — cela devient vite un casse-tête.
+
+J'ai dû tester énormément de combinaisons d'options (justify-content, align-items, flex-wrap ) pour comprendre comment chaque bloc 
+réagissait par rapport à ses voisins. Honnêtement, j'y ai passé des heures. Le plus difficile a été d'obtenir une disposition 
+vraiment proche du modèle pour la partie tableau : un petit décalage, une mauvaise valeur ou une propriété oubliée, et tout le 
+rendu changeait. J'ai dû recommencer plusieurs sections, notamment la grille des propriétés, pour retrouver une structure propre.
+        </p>
+      
+
+      </div>
+      
+    </section>
+
+    <!-- EXERCICE 2 -->
+    <section class="exercice-block">
+      <h3>Exercice 2 – Mise en page magazine</h3>
+
+      <iframe src="ex2/exercice2.html"></iframe>
+
+      <div class="commentaire">
+        <h3>Commentaire – Exercice 2</h3>
+      
+        <p>
+À partir de l'archive fournie, je devais compléter le fichier style.css pour que le document exemple.html corresponde visuellement à 
+l'image de référence (exemple.jpg), tout en respectant une charte graphique précise (couleurs imposées pour le body, le header, le 
+footer, etc.).
+
+
+Contraintes et réalisation : La contrainte majeure était l'interdiction de modifier le fichier HTML. Cet exercice m'a paru vraiment 
+compliqué pour cette raison. Refaire toute une maquette seulement en CSS, sans pouvoir ajouter de classes ou de divs supplémentaires, 
+s'est révélé beaucoup plus laborieux que je ne le pensais.
+
+J'ai dû passer un bon moment à régler les marges, les positions et les images de fond pour que tout ressemble à peu près au modèle 
+fourni dans les ressources. Le plus dur, c'était que chaque petite modification décalait autre chose. Entre la gestion des backgrounds, 
+l'utilisation des floats et les ajustements de positionnement, j'ai fait énormément d'allers-retours avant d'obtenir quelque chose de 
+stable.
+        </p>
+      
+      </div>
+      
+    </section>
+
+  </div>
+
+</body>
+</html>

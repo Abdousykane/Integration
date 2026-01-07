@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TP8 – Exercices</title>
+
+  <!-- Style global -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* ===== PALETTE ===== */
+    :root {
+      --sand: #ffffff;          /* beige */
+      --blue-light: #AFC9E8;    /* bleu clair */
+      --blue-dark: #3E5F87;     /* bleu foncé */
+      --text: #2a2a2a;
+      --grey-border: #d5d5d5;
+    }
+  
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif; 
+    }
+  
+    body {
+      background: var(--sand);
+      color: var(--text);
+      padding: 40px 20px;
+    }
+  
+    /* ===== TITRE ===== */
+    h2 {
+      font-size: 28px;
+      color: var(--blue-dark);
+      text-align: center;
+      margin-bottom: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    /* ===== CONTAINER ===== */
+    .tp-container {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+  
+    /* ===== EXERCICE BLOCK ===== */
+    .exercice-block {
+      background: #ffffff;
+      border: 1px solid var(--grey-border);
+      border-radius: 4px;
+      padding: 20px;
+    }
+  
+    .exercice-block h3 {
+      color: var(--blue-dark);
+      font-size: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  
+    /* ===== IFRAME ===== */
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid var(--grey-border);
+      border-radius: 4px;
+      background: white;
+      margin-top: 8px;
+    }
+  
+    /* ===== COMMENTAIRE ===== */
+    .commentaire {
+      margin-top: 18px;
+      padding: 15px;
+      background: #F4F0E8; /* beige plus clair */
+      border-radius: 4px;
+    }
+  
+    .commentaire h3,
+    .commentaire h4 {
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: var(--blue-dark);
+    }
+  
+    .commentaire p {
+      font-size: 14.5px;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 style="margin:20px;">TP8 – Exercices 1, 2 et 3</h2>
+
+  <div class="tp-container">
+
+    <!-- ==================== EXERCICE 1 ==================== -->
+    <section class="exercice-block">
+      <h3>Exercice 1</h3>
+
+      <iframe src="ex1/index.html"></iframe>
+
+      <div class="commentaire"> <h3>Commentaire – Exercice Sprite</h3> <p> Cet exercice m’a demandé d’afficher une sprite sheet dans un canvas et de faire bouger le personnage avec les touches directionnelles. Sur le papier, ça avait l’air simple, mais en pratique j’ai vite vu que gérer une animation image par image demande pas mal de précision. </p> <p> J’ai surtout galéré avec le découpage du sprite : comprendre comment récupérer la bonne partie de l’image selon la ligne et la colonne, recalculer la taille des frames, et éviter que le personnage soit totalement invisible parce que l’image n’était pas encore chargée. J’ai dû corriger plusieurs fois la logique avant d’obtenir un affichage cohérent. </p> <p> Le déplacement fonctionne, même si l’animation n’est pas parfaite. Par moments, le personnage se déplace un peu trop vite ou ne s’aligne pas exactement comme je voudrais, mais l’ensemble reste fluide et lisible. Le fond aussi m’a posé quelques soucis au début, mais après quelques ajustements, tout s’affiche correctement. </p> <p> Au final, même si le résultat n’est pas totalement optimisé, j’ai réussi à obtenir une animation complète et fonctionnelle. Cet exercice m’a surtout appris comment manipuler des sprites dans un canvas, gérer les événements clavier et organiser une petite boucle d’animation. C’était plus technique que prévu, mais vraiment formateur. </p> </div>
+      
+    </section>
+
+
+    <!-- ==================== EXERCICE 2 ==================== -->
+    <section class="exercice-block">
+      <h3>Exercice 2</h3>
+
+      <iframe src="ex2/index.html"></iframe>
+
+      <div class="commentaire">
+        <h3>Commentaire – Exercice 2</h3>
+      
+        <p>
+          L’objectif de cet exercice était de créer une animation en continu dans le canvas : Mario devait courir en boucle pendant que le décor avançait derrière lui. Le rendu final donne l’impression d’un mouvement automatique, comme dans un jeu en 2D.
+        </p>
+      
+        <p>
+          La mise en place de l’animation m’a obligé à bien gérer les images du sprite et le rafraîchissement du canvas. Le principe reste assez simple : changer régulièrement l’image de Mario et déplacer l’arrière-plan à une vitesse constante. Le décor se répète automatiquement, ce qui permet d’avoir un défilement infini.
+        </p>
+      
+        <p>
+          La difficulté que j’ai surtout rencontrée concernait le timing : si l’avancement du fond ou la vitesse du sprite n’est pas bien réglée, l’animation semble saccadée ou Mario paraît glisser au lieu de courir. J’ai dû ajuster plusieurs valeurs avant d’obtenir un rendu fluide.
+        </p>
+      
+        <p>
+          Le résultat final est satisfaisant : Mario court correctement, le fond se déplace sans coupure, et l’ensemble est assez dynamique. Cet exercice m’a aidé à mieux comprendre la gestion des animations continues dans un canvas.
+        </p>
+      </div>
+      
+    </section>
+
+  </div>
+
+</body>
+</html>

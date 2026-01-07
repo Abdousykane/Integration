@@ -1,0 +1,27 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boite {
+    text-align: center;
+}
+
+canvas {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #444;
+
+}

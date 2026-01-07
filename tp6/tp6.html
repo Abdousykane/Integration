@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TP6 – Exercices</title>
+
+  <!-- Style global -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* ===== PALETTE ===== */
+    :root {
+      --sand: #ffffff;          /* beige */
+      --blue-light: #AFC9E8;    /* bleu clair */
+      --blue-dark: #3E5F87;     /* bleu foncé */
+      --text: #2a2a2a;
+      --grey-border: #d5d5d5;
+    }
+  
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif; 
+    }
+  
+    body {
+      background: var(--sand);
+      color: var(--text);
+      padding: 40px 20px;
+    }
+  
+    /* ===== TITRE ===== */
+    h2 {
+      font-size: 28px;
+      color: var(--blue-dark);
+      text-align: center;
+      margin-bottom: 35px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  
+    /* ===== CONTAINER ===== */
+    .tp-container {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+  
+    /* ===== EXERCICE BLOCK ===== */
+    .exercice-block {
+      background: #ffffff;
+      border: 1px solid var(--grey-border);
+      border-radius: 4px;
+      padding: 20px;
+    }
+  
+    .exercice-block h3 {
+      color: var(--blue-dark);
+      font-size: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  
+    /* ===== IFRAME ===== */
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid var(--grey-border);
+      border-radius: 4px;
+      background: white;
+      margin-top: 8px;
+    }
+  
+    /* ===== COMMENTAIRE ===== */
+    .commentaire {
+      margin-top: 18px;
+      padding: 15px;
+      background: #F4F0E8; /* beige plus clair */
+      border-radius: 4px;
+    }
+  
+    .commentaire h3,
+    .commentaire h4 {
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: var(--blue-dark);
+    }
+  
+    .commentaire p {
+      font-size: 14.5px;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 style="margin:20px;">TP6 – Exercices 1, 2 et 5</h2>
+
+  <div class="tp-container">
+
+    <section class="exercice-block">
+      <h3>Exercice 1</h3>
+
+      <iframe src="ex2/index.html"></iframe>
+
+      <div class="commentaire">
+        <h3>Commentaire – Exercice 1</h3>
+      
+        <p>
+          L’objectif de cet exercice était de créer un effet “rideau” en pur CSS : au survol, un bloc devait glisser sur l’image pour la recouvrir. Pour ça, on utilisait surtout le positionnement absolu et une transition appliquée au transform.
+        </p>
+      
+        <p>
+          La logique est assez simple : un conteneur positionné correctement, un élément qui sert de masque, et un <code>:hover</code> pour déclencher l’animation. Une fois la structure posée, l’effet se met en place rapidement.
+        </p>
+      
+        <p>
+          C’était un bon rappel des bases du positionnement et des transitions CSS. Le résultat final fonctionne bien et l’animation est fluide, conforme à ce qui était demandé.
+        </p>
+      </div>      
+      
+    </section>
+
+
+    <section class="exercice-block">
+      <h3>Exercice 5</h3>
+
+      <iframe src="ex5/Ex5.html" ></iframe>
+
+      <div class="commentaire">
+        <h3>Commentaire – Exercice 5</h3>
+      
+        <p>
+          Pour cet exercice, j’ai réalisé une bannière publicitaire animée au format 728 × 90 px. 
+          J’ai choisi un thème autour du bien-être, avec une ambiance douce et naturelle, afin de produire 
+          une bannière plus élégante et moins “agressive” visuellement que les pubs classiques.
+        </p>
+      
+        <p>
+          La bannière se compose d’un texte animé en CSS, qui apparaît progressivement avec un effet de glissement, 
+          et d’une image simple (une feuille stylisée) animée en zoom léger. J’ai aussi ajouté des lignes dorées 
+          qui se déplacent horizontalement pour donner un côté plus moderne sans surcharger l’espace.
+        </p>
+      
+        <p>
+          La difficulté principale a été de réussir à tout faire rentrer dans un format aussi étroit. 
+          Il fallait trouver un équilibre entre lisibilité, animation et esthétique, tout en gardant une structure claire. 
+          Les animations en elles-mêmes sont simples, mais le timing et le rythme demandent quelques ajustements 
+          pour que tout reste fluide.
+        </p>
+      
+        <p>
+          Au final, la bannière fonctionne bien : le texte apparaît de manière douce, la feuille s’anime en continu 
+          et les lignes créent une ambiance plus vivante. L’ensemble respecte les contraintes du sujet et donne un rendu propre 
+          et professionnel.
+        </p>
+      </div>
+      
+      
+    </section>
+
+  </div>
+
+</body>
+</html>
